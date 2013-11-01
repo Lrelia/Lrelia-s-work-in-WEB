@@ -1,0 +1,42 @@
+/*
+FireFox支持transform-style，
+chrome和Safari支持-webkit-transform-style
+*/
+body {
+	margin: 0 auto;
+	text-align: center;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    -webkit-perspective: 1200;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 1s;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,.65);
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.face {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+.card:hover {
+    -webkit-transform: rotateY(180deg);
+}
+.back {
+    width: 95%;
+    height: 95%;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    margin: 0 auto;
+    -webkit-transform: rotateY(180deg);
+}
+.front {
+	margin: 2.5% 0 0 2.5%;
+    width: 95%;
+    height: 95%;
+    overflow: hidden;/*important*/
+}
